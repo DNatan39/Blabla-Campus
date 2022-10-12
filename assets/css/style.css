@@ -926,10 +926,6 @@ a.trajetCard:nth-child(5) {
     line-height: 20px;
 }
 
-#cardgeneral {
-    height: 55vh;
-}
-
 #bulleprofil {
     border-radius: 20px;
     position: relative;

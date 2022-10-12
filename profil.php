@@ -31,7 +31,7 @@ include_once "header.php";
                     <a href="profil.php" class="btnbacknone"><img src="assets/img/icones/People.svg"
                             alt="Icon d'une personne"></a>
                 </header>
-                <div id="cardgeneral" class="w100 is-flex is-justify-content-center mt-5">
+                <div id="cardgeneral" class="w100 is-flex is-justify-content-center is-align-items-center mt-5">
                     <div id="bulleprofil"
                         class=" box w90 is-flex is-justify-content-space-evenly is-align-items-center is-flex-direction-column">
                         <span id="triangle"></span>
