@@ -18,11 +18,24 @@ if(isset($_GET['id'])){
     $hours1 = $_SESSION["trajet_step_hour_1"];
     $hours2 = $_SESSION["trajet_step_hour_2"];
     $hours3 = $_SESSION["trajet_final_hour"];
+    $hour1;
+    $hour2;
+    $hour3;
 
     $hours = explode(':',$hours); $hour = $hours[0]; $min = $hours[1];
-    $hours1 = explode(':',$hours1); $hour1 = $hours1[0]; $min1 = $hours1[1];
-    $hours2 = explode(':',$hours2); $hour2 = $hours2[0]; $min2 = $hours2[1];
-    $hours3 = explode(':',$hours3); $hour3 = $hours3[0]; $min3 = $hours3[1];
+    if($hours1!=NULL){
+        $hours1 = explode(':',$hours1); $hour1 = $hours1[0]; $min1 = $hours1[1];
+    }else{ $hour1 = NULL;}
+    if($hours2!=NULL){
+        $hours2 = explode(':',$hours2); $hour2 = $hours2[0]; $min2 = $hours2[1];
+    }else{$hour2 = NULL;
+    }
+    if($hours3!=NULL){
+        $hours3 = explode(':',$hours3); $hour3 = $hours3[0]; $min3 = $hours3[1];
+
+    }else{// $hour1
+    }
+    
     
     
 }else{
@@ -91,7 +104,7 @@ if(isset($_GET['id'])){
                             <span class="icon is-small is-left mt-3">
                                 <i class="fa-regular fa-clock"></i></span>
                             <input type="time" name="heure" id="heure" class="input is-medium" placeholder="Heure"
-                                value="<?= $hour; echo ":".$min ?>">
+                                value="<?php if($hour!=NULL){echo $hour.":".$min;}  ?>">
                         </div>
 
                         <!-- arrivée -->
@@ -130,7 +143,7 @@ if(isset($_GET['id'])){
                             <span class="icon is-small is-left mt-3">
                                 <i class="fa-regular fa-clock"></i></span>
                             <input type="time" name="h-arrive" id="h-arrive" class="input is-medium h-arrive"
-                                placeholder="Heure" value="<?= $hour3.':'.$min3; ?>">
+                                placeholder="Heure" value="<?php if($hour!=NULL){echo $hour.":".$min;} ?>">
                         </div>
 
                         <!-- date départ -->
@@ -219,7 +232,7 @@ if(isset($_GET['id'])){
                                         <span class="icon is-small is-left mt-3">
                                             <i class="fa-regular fa-clock"></i></span>
                                         <input type="time" name="h-mid1" id="h-mid1" class="input is-medium h-mid1"
-                                            placeholder="Heure" value="<?= $hour1.':'.$min1; ?>">
+                                            placeholder="Heure" value="<?php if($hour1!=NULL){echo $hour1.":".$min1;} ?>">
                                     </div>
                                 </div>
 
@@ -235,7 +248,7 @@ if(isset($_GET['id'])){
                                             <span class="icon is-small is-left mt-3">
                                                 <i class="fa-regular fa-clock"></i></span>
                                             <input type="time" name="h-mid2" id="h-mid2" class="input is-medium h-mid2"
-                                                placeholder="Heure" value="<?= $hour2.':'.$min2; ?>">
+                                                placeholder="Heure" value="<?php if($hour2!=NULL){echo $hour2.":".$min2;} ?>">
                                         </div>
                                     </div>
                                 </div>

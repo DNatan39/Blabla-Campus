@@ -10,9 +10,9 @@ if(isset($_GET["action"]) && !empty($_GET["location"]) && !empty($_GET["heure"])
     $place = $_GET["place"];
     $road = $_GET["road"];
     $final_hour = $_GET["h-arrive"];
-    $step_hour1 = $_GET["h-mid1"];
-    $step_hour2 = $_GET["h-mid2"];
-    $gps1 = $_GET["gpsCo1"];
+    // $step_hour1 = $_GET["h-mid1"];
+    // $step_hour2 = $_GET["h-mid2"];
+    // $gps1 = $_GET["gpsCo1"];
     $gps2 = $_GET["gpsCo2"];
     $gps3 = $_GET["gpsCo3"];
 
@@ -20,6 +20,19 @@ if(isset($_GET["action"]) && !empty($_GET["location"]) && !empty($_GET["heure"])
     else{ $etapes1 = $_GET["locationAdd"]; }
     if(empty($_GET["locationAdd2"])){ $etapes2=null; }
     else{ $etapes2 = $_GET["locationAdd2"]; }
+
+    if(empty($_GET["h-mid1"])){ $step_hour1=null; }
+    else{ $step_hour1 = $_GET["h-mid1"]; }
+
+    if(empty($_GET["h-mid2"])){ $step_hour2=null; }
+    else{ $step_hour2 = $_GET["h-mid2"]; }
+
+    if(empty($_GET["gpsCo1"])){ $gps1=null; }
+    else{ $gps1 = $_GET["gpsCo1"]; }
+    if(empty($_GET["gpsCo2"])){ $gps2=null; }
+    else{ $gps2 = $_GET["gpsCo2"]; }
+    if(empty($_GET["gpsCo3"])){ $gps3=null; }
+    else{ $gps13 = $_GET["gpsCo3"]; }
 
     $arr = array($etapes1,$etapes2);
     $lesEtapes = implode("&&",$arr);
