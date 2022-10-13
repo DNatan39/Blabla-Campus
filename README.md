@@ -6,3 +6,6 @@ Le but de ce projet est de réaliser une **PWA** (Progressive web app) pouvant �
 
 ### Présentation + Objectifs :
 Nous sommes trois dans ce projet (Un Intégrateur, Un Développeur et un Chef de projet) et dans ce projet nous devons réaliser une PWA (Progressive web app) sur le covoiturage. Nous avons un cahier des charges qui définie le style mais aussi comment celà doit fonctionner. Pour l'objectif l'intégrateur va s'occuper du style de la PWA et le Développeur s'occupe du côté back-end. Pour le chef de projet, il s'organise et organise le groupe. Il peut très bien faire de front-end comme du back-end.
+
+### Pour lier la base donnée :
+Il y a deux accès à la base de donnée. La première c'est dans PHP et dbh.class.php. La deuxième est dans config et config.php
